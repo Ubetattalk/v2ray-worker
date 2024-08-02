@@ -16,10 +16,13 @@ jobs:
       with:
         node-version: "latest"
         cache: "npm"
+        
+    - name: Install 2
+      run: npm install wrangler --save-dev
 
     - name: Install modules
-      run: npm i wrangler@latest
-
+      run: npm install wrangler@latest
+      
     - name: Build
       run: npx wrangler build
 
